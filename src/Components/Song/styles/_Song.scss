@@ -1,0 +1,19 @@
+.song-container {
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+  border-radius: $borderRadius;
+  background-color: $color--white;
+  box-shadow: $boxShadow;
+  padding: 10px;
+  margin: 10px auto;
+
+  .icon-audio {
+    cursor: pointer;
+    transition: all 0.7s ease-out;
+
+    &:hover {
+      transform: scale(1.7);
+    }
+  }
+}

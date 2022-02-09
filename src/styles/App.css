@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap");
+.searchbar-container label,
+.searchbar-container svg {
+  cursor: pointer;
+}
+
+.searchbar-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.searchbar-container form .error-msg {
+  color: red;
+  font-size: 14px;
+  text-align: right;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  position: absolute;
+  right: 0;
+  top: 65%;
+}
+
+.searchbar-container form .input-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  place-items: center;
+  -webkit-box-shadow: 0px 3px 5px #747474;
+          box-shadow: 0px 3px 5px #747474;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+.searchbar-container form .input-container input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  border: none;
+  text-transform: capitalize;
+  background: #fbfbfb;
+}
+
+.searchbar-container form .input-container input::-webkit-input-placeholder {
+  color: #747474;
+  line-height: 24px;
+}
+
+.searchbar-container form .input-container input:-ms-input-placeholder {
+  color: #747474;
+  line-height: 24px;
+}
+
+.searchbar-container form .input-container input::-ms-input-placeholder {
+  color: #747474;
+  line-height: 24px;
+}
+
+.searchbar-container form .input-container input::placeholder {
+  color: #747474;
+  line-height: 24px;
+}
+
+.searchbar-container form .btn-as-link {
+  color: #ffffff;
+  background: #007bff;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.searchbar-container form .btn-as-link:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+.song-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 4px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 3px 5px #747474;
+          box-shadow: 0px 3px 5px #747474;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.song-container .icon-audio {
+  cursor: pointer;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+
+.song-container .icon-audio:hover {
+  -webkit-transform: scale(1.7);
+          transform: scale(1.7);
+}
+
+.loading-container {
+  -ms-flex-item-align: center !important;
+      align-self: center !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+* body {
+  background: #fbfbfb;
+}
+
+* a {
+  text-decoration: none;
+  display: block;
+}
+
+* .App {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  width: 400px;
+  margin: 0 auto;
+}
+
+* .App .main-heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  color: #111111;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin-bottom: 20px;
+}
+
+* .App section {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+* .App section .capitalize {
+  text-transform: capitalize;
+  font-size: inherit;
+  color: #007bff;
+}
+
+* .App section.homepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+* .App section.results .sub-heading {
+  color: #747474;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+* .App section.results.center {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+* .App section a {
+  color: #ffffff;
+  background: #007bff;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+* .App section a:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+}
+
+* .App footer {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  padding-bottom: 40px;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,62 @@
+.searchbar-container {
+  label,
+  svg {
+    cursor: pointer;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+
+    .error-msg {
+      color: red;
+      font-size: 14px;
+      text-align: right;
+      transform: translateY(-20px);
+      position: absolute;
+      right: 0;
+      top: 65%;
+    }
+
+    .input-container {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      place-items: center;
+      box-shadow: $boxShadow;
+      border-radius: $borderRadius;
+      padding: 5px 10px;
+
+      input {
+        width: 100%;
+        outline: none;
+        padding: 5px 10px;
+        border: none;
+        text-transform: capitalize;
+        background: $color--light-grey;
+
+        &::placeholder {
+          color: $color--grey;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .btn-as-link {
+      color: $color--white;
+      background: $color--blue;
+      transition: all 0.75s ease;
+      padding: 10px;
+      border-radius: $borderRadius;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+
+      &:hover {
+        transform: scale(1.07);
+      }
+    }
+  }
+}
