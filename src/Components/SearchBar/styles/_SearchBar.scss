@@ -27,6 +27,7 @@
       box-shadow: $boxShadow;
       border-radius: $borderRadius;
       padding: 5px 10px;
+      background: $color--white;
 
       input {
         width: 100%;
@@ -34,7 +35,6 @@
         padding: 5px 10px;
         border: none;
         text-transform: capitalize;
-        background: $color--light-grey;
 
         &::placeholder {
           color: $color--grey;

@@ -31,9 +31,11 @@ const Results = () => {
   console.log(state)
 
   return !!state && state !== undefined ? (
-    <section className={`results ${state.numRecordings < 0 ? 'center' : ''}`}>
+    <section
+      className={`results ${+state.numRecordings === 0 ? 'center' : ''}`}
+    >
       {/* Check for amount of results */}
-      {state.numRecordings > 0 ? (
+      {+state.numRecordings > 0 ? (
         <>
           <h2 className="sub-heading">
             <span className="capitalize">{inputValue}</span>&apos;s top 5
