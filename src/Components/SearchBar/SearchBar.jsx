@@ -9,20 +9,17 @@ import { StateContext } from '../../context/StateContext'
 const SearchBar = () => {
   const navigate = useNavigate()
 
-  const { inputValue, setInputValue } = useContext(StateContext)
+  const { setInputValue } = useContext(StateContext)
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm()
-  console.log(inputValue)
 
   const onSubmit = (data) => {
     setInputValue(data.location)
     navigate('results')
-    console.log(inputValue)
   }
 
   return (
