@@ -14,7 +14,8 @@ const Loading = () => {
             marginTop: 2,
             background: '#3F3D56',
             borderRadius: '4px',
-            '& span': { background: '#00BFA6', animationDuration: '4s' },
+            height: '5px',
+            '& span': { background: '#00BFA6', animationDuration: '3.5s' },
           }}
         />
         <Link

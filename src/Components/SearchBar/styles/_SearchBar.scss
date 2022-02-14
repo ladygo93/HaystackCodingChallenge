@@ -26,8 +26,13 @@
       place-items: center;
       box-shadow: $boxShadow;
       border-radius: $borderRadius;
+      border: 1.5px solid $color--white;
       padding: 5px 10px;
       background: $color--white;
+
+      &.focused {
+        border-color: $color--blue;
+      }
 
       input {
         width: 100%;

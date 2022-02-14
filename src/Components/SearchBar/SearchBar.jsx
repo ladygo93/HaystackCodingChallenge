@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { ErrorMessage } from '@hookform/error-message'
@@ -10,6 +10,8 @@ const SearchBar = () => {
   const navigate = useNavigate()
 
   const { setInputValue } = useContext(StateContext)
+
+  const [isFocused, setIsFocused] = useState(false)
 
   const {
     register,
@@ -27,7 +29,11 @@ const SearchBar = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="searchbar">
           Enter a location
-          <div className="input-container">
+          <div
+            onFocus={() => setIsFocused(!isFocused)}
+            onBlur={() => setIsFocused(!isFocused)}
+            className={`input-container ${isFocused ? 'focused' : ''}`}
+          >
             <FaSearch />
             <input
               {...register('location', {

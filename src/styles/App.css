@@ -36,8 +36,13 @@
   -webkit-box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
+  border: 1.5px solid #ffffff;
   padding: 5px 10px;
   background: #ffffff;
+}
+
+.searchbar-container form .input-container.focused {
+  border-color: #007bff;
 }
 
 .searchbar-container form .input-container input {
